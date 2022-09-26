@@ -136,7 +136,7 @@ namespace ToolEntrySHD
                             ImageView.Image.Dispose();
                             ImageView.Dispose();
                             File.Delete(locFile[counter - 1]);
-                            MessageBox.Show("Complete!!", "Thông báo", MessageBoxButtons.OK);
+                            MessageBox.Show("Last Image!!", "Thông báo", MessageBoxButtons.OK);
                             this.Close();
                         }
                         else
