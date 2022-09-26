@@ -42,7 +42,7 @@
             this.btnInputPath.Location = new System.Drawing.Point(12, 10);
             this.btnInputPath.Name = "btnInputPath";
             this.btnInputPath.Size = new System.Drawing.Size(49, 23);
-            this.btnInputPath.TabIndex = 0;
+            this.btnInputPath.TabIndex = 1;
             this.btnInputPath.Text = "....";
             this.btnInputPath.UseVisualStyleBackColor = true;
             this.btnInputPath.Click += new System.EventHandler(this.btnInputPath_Click);
@@ -55,6 +55,7 @@
             this.txtPath.Size = new System.Drawing.Size(363, 20);
             this.txtPath.TabIndex = 3;
             this.txtPath.TabStop = false;
+            this.txtPath.Enabled = false;
             // 
             // ImageView
             // 
@@ -79,7 +80,7 @@
             this.txtEntry.Location = new System.Drawing.Point(13, 555);
             this.txtEntry.Name = "txtEntry";
             this.txtEntry.Size = new System.Drawing.Size(418, 20);
-            this.txtEntry.TabIndex = 1;
+            this.txtEntry.TabIndex = 0;
             this.txtEntry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEntry_KeyDown);
             // 
             // txtPathHidden
@@ -91,6 +92,7 @@
             this.txtPathHidden.TabIndex = 4;
             this.txtPathHidden.TabStop = false;
             this.txtPathHidden.Visible = false;
+            this.txtPathHidden.Enabled = false;
             // 
             // frmToolEntrySHD
             // 
