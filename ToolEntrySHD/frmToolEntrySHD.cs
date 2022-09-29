@@ -100,7 +100,6 @@ namespace ToolEntrySHD
                         { this.Close(); }
                         break;
                     case Keys.Delete:
-                        int countFile = locFile.Count() - 1;
                         ImageView.Image.Dispose();
                         File.Delete(locFile[counter]);
                         locFile.RemoveAt(counter);
