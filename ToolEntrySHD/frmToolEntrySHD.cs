@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using File = System.IO.File;
 
@@ -16,19 +11,17 @@ namespace ToolEntrySHD
     public partial class frmToolEntrySHD : Form
     {
         public frmToolEntrySHD()
-        {
-            InitializeComponent();
-        }
+        { InitializeComponent(); }
         List<string> locFile = new List<string>();
         List<string> FileResult = new List<string>();
         FolderBrowserDialog fd = new FolderBrowserDialog();
         int counter = 0;
+
         private void showImage()
         {
             try
             {
-                int countFile = locFile.Count();
-                if (counter == countFile)
+                if (counter == locFile.Count())
                 {
                     MessageBox.Show("Complete!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
@@ -41,7 +34,7 @@ namespace ToolEntrySHD
                     this.txtEntry.Focus();
                 }
             }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
         private void btnInputPath_Click(object sender, EventArgs e)
         {
@@ -78,7 +71,7 @@ namespace ToolEntrySHD
         {
             try
             {
-                
+
                 if (e.KeyCode == Keys.Enter)
                 {
                     ImageView.Image.Save(txtPath.Text + "\\result\\" + (counter + 1).ToString().PadLeft(6, '0') + "_" + txtEntry.Text.Trim() + ".jpg");
@@ -100,16 +93,19 @@ namespace ToolEntrySHD
                         { this.Close(); }
                         break;
                     case Keys.Delete:
-                        int countFile = locFile.Count() - 1;
                         ImageView.Image.Dispose();
                         File.Delete(locFile[counter]);
                         locFile.RemoveAt(counter);
+                        showImage();
+                        break;
+                    case Keys.F1:
+                        ImageView.Image.Save(txtPath.Text + "\\result\\" + (counter + 1).ToString().PadLeft(6, '0') + "_" + Path.GetFileName(locFile[counter]).Split('_').Last().Trim());
+                        counter += 1;
                         showImage();
                         break;
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-
     }
 }

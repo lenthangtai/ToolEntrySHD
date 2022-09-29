@@ -80,10 +80,10 @@
             // 
             // txtEntry
             // 
-            this.txtEntry.Location = new System.Drawing.Point(13, 626);
+            this.txtEntry.Location = new System.Drawing.Point(20, 624);
             this.txtEntry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEntry.Name = "txtEntry";
-            this.txtEntry.Size = new System.Drawing.Size(596, 26);
+            this.txtEntry.Size = new System.Drawing.Size(590, 26);
             this.txtEntry.TabIndex = 1;
             this.txtEntry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEntry_KeyDown);
             // 
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 666);
+            this.ClientSize = new System.Drawing.Size(631, 663);
             this.Controls.Add(this.txtEntry);
             this.Controls.Add(this.lblValueIndex);
             this.Controls.Add(this.ImageView);
