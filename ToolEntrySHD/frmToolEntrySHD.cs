@@ -131,15 +131,26 @@ namespace ToolEntrySHD
                         }
                         break;
                     case Keys.Delete:
-                        if (ImageView != null)
+                       if (counter == locFile.Count()-1 )
                         {
                             ImageView.Image.Dispose();
                             File.Delete(locFile[counter]);
                             locFile.RemoveAt(counter);
-                            ImageView.Image = Image.FromFile(locFile[counter]);
-                            lblValueIndex.Text = Convert.ToInt32(counter + 1) + "/" + locFile.Count.ToString();
-                            txtEntry.Clear();
-
+                            DialogResult dr = MessageBox.Show("Last Image Delete!!", "ALERT", MessageBoxButtons.OKCancel);
+                            if(dr == DialogResult.OK)
+                            {
+                                this.Close();
+                            }    
+                            return;
+                        }
+                        else
+                        {
+                                ImageView.Image.Dispose();
+                                File.Delete(locFile[counter]);
+                                locFile.RemoveAt(counter);
+                                ImageView.Image = Image.FromFile(locFile[counter]);
+                                lblValueIndex.Text = Convert.ToInt32(counter + 1) + "/" + locFile.Count.ToString();
+                                txtEntry.Clear();
                         }        
                         break;
                 }
