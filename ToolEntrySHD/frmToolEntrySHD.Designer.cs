@@ -33,7 +33,6 @@
             this.ImageView = new System.Windows.Forms.PictureBox();
             this.lblValueIndex = new System.Windows.Forms.Label();
             this.txtEntry = new System.Windows.Forms.TextBox();
-            this.txtPathHidden = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +42,7 @@
             this.btnInputPath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnInputPath.Name = "btnInputPath";
             this.btnInputPath.Size = new System.Drawing.Size(45, 31);
-            this.btnInputPath.TabIndex = 1;
+            this.btnInputPath.TabIndex = 0;
             this.btnInputPath.Text = "....";
             this.btnInputPath.UseVisualStyleBackColor = true;
             this.btnInputPath.Click += new System.EventHandler(this.btnInputPath_Click);
@@ -85,27 +84,14 @@
             this.txtEntry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEntry.Name = "txtEntry";
             this.txtEntry.Size = new System.Drawing.Size(596, 26);
-            this.txtEntry.TabIndex = 0;
+            this.txtEntry.TabIndex = 1;
             this.txtEntry.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEntry_KeyDown);
-            // 
-            // txtPathHidden
-            // 
-            this.txtPathHidden.Enabled = false;
-            this.txtPathHidden.Location = new System.Drawing.Point(597, 16);
-            this.txtPathHidden.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPathHidden.Name = "txtPathHidden";
-            this.txtPathHidden.ReadOnly = true;
-            this.txtPathHidden.Size = new System.Drawing.Size(13, 26);
-            this.txtPathHidden.TabIndex = 4;
-            this.txtPathHidden.TabStop = false;
-            this.txtPathHidden.Visible = false;
             // 
             // frmToolEntrySHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(631, 666);
-            this.Controls.Add(this.txtPathHidden);
             this.Controls.Add(this.txtEntry);
             this.Controls.Add(this.lblValueIndex);
             this.Controls.Add(this.ImageView);
@@ -119,7 +105,6 @@
             this.MinimizeBox = false;
             this.Name = "frmToolEntrySHD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmToolEntrySHD_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmToolEntrySHD_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.ImageView)).EndInit();
             this.ResumeLayout(false);
@@ -134,7 +119,6 @@
         private System.Windows.Forms.PictureBox ImageView;
         private System.Windows.Forms.Label lblValueIndex;
         private System.Windows.Forms.TextBox txtEntry;
-        private System.Windows.Forms.TextBox txtPathHidden;
     }
 }
 
