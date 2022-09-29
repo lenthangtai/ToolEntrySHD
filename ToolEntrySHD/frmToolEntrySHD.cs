@@ -139,6 +139,7 @@ namespace ToolEntrySHD
                             ImageView.Image = Image.FromFile(locFile[counter]);
                             lblValueIndex.Text = Convert.ToInt32(counter + 1) + "/" + locFile.Count.ToString();
                             txtEntry.Clear();
+
                         }        
                         break;
                 }
